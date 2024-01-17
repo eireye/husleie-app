@@ -2,10 +2,10 @@
 
 A simple desktop calculator for calculating rent in our household.
 
-Change the percentages to whatever business model you have.
+
 
 Defaults are:
-It calculates the total amoun, based on what percentage of each participants share of "avdrag
+It calculates the total amount, based on what percentage of each participants share of "avdrag
 
 `cargo run` to run it.
 
