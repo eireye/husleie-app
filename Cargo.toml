@@ -15,4 +15,4 @@ slint-build = "1.0"
 
 [package.metadata.bundle]
 name = "Leie utregner"
-identifier = "io.github.eireye.project"
+identifier = "io.github.eireye.husleie-app"
