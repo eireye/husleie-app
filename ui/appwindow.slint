@@ -1,0 +1,138 @@
+import { Button, VerticalBox , LineEdit} from "std-widgets.slint";
+
+export component AppWindow inherits Window {
+
+    in property <string> results:"";
+    callback utregning-belop(string, string, string, string, string, string);
+
+
+    background: #313e50;
+    GridLayout {
+        padding: 50px;
+        spacing: 10px;
+        Row{
+            Text {
+                text: "Maris total";
+                horizontal-alignment: center;
+                font-size: 24px;
+                font-weight: 900;
+
+            }
+
+        }
+        Row{
+            total := LineEdit {
+                font-size: 14px;
+                placeholder-text: "Skriv inn tall";
+            }
+        }
+        Row{
+            Text {
+                text: "Maris rente";
+                horizontal-alignment: center;
+                font-size: 24px;
+                font-weight: 900;
+
+            }
+
+        }
+        Row{
+            rente := LineEdit {
+                font-size: 14px;
+                placeholder-text: "Skriv inn tall";
+            }
+        }
+        Row{
+            Text {
+                text: "Eiriks avdrag";
+                horizontal-alignment: center;
+                font-size: 24px;
+                font-weight: 900;
+
+            }
+
+        }
+        Row{
+            avdrag := LineEdit {
+                font-size: 14px;
+                placeholder-text: "Skriv inn tall";
+            }
+        }
+        Row{
+            Text {
+                text: "Strøm";
+                horizontal-alignment: center;
+                font-size: 24px;
+                font-weight: 900;
+
+            }
+
+        }
+        Row{
+            strom1 := LineEdit {
+                font-size: 14px;
+                placeholder-text: "Skriv inn tall";
+            }
+        }
+        Row{
+            Text {
+                text: "Strøm2";
+                horizontal-alignment: center;
+                font-size: 24px;
+                font-weight: 900;
+
+            }
+
+        }
+        Row{
+            strom2 := LineEdit {
+                font-size: 14px;
+                placeholder-text: "Skriv inn tall";
+            }
+        }
+        Row{
+            Text {
+                text: "Strøm3";
+                horizontal-alignment: center;
+                font-size: 24px;
+                font-weight: 900;
+
+            }
+
+        }
+        Row{
+            strom3 := LineEdit {
+                font-size: 14px;
+                placeholder-text: "Skriv inn tall";
+            }
+        }
+        Row{
+            Button {
+                text: "Kalkuler";
+                primary: true;
+                height: 35px;
+                clicked => {utregning-belop(
+                    total.text,
+                    rente.text,
+                    avdrag.text,
+                    strom1.text,
+                    strom2.text,
+                    strom3.text)}
+            }
+        }
+        Row{
+            VerticalBox {
+                Rectangle{
+                    height: 100px;
+                    background: #f2f2f2;
+                    Text {
+                        color: black;
+                        font-size: 16px;
+                        font_weight: 500;
+                        text: root.results;
+                    }
+                }
+            }
+        }
+    }
+}
