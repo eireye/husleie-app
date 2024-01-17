@@ -10,9 +10,9 @@ fn main() -> Result<(), slint::PlatformError> {
         let total_num = parse_to_f64(&total);
         let rente_num = parse_to_f64(&rente);
         let avdrag_num = parse_to_f64(&avdrag);
-        let strom1_num = parse_to_f64(&strom1);
-        let strom2_num = parse_to_f64(&strom2);
-        let strom3_num = parse_to_f64(&strom3);
+        let strom1_num = parse_to_f64(&strom1) / 2.0;
+        let strom2_num = parse_to_f64(&strom2) / 2.0;
+        let strom3_num = parse_to_f64(&strom3) / 2.0;
 
         let rente2_num = rente_num / 2.0;
         let mari_andel = total_num - rente_num;
